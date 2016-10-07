@@ -1,0 +1,12 @@
+- hosts: localhost
+  remote_user: vagrant
+  become: true
+  become_user: root
+  roles:
+    - docker
+  tasks:
+    - name: Add vagrant user to docker group
+      user: name=vagrant groups=docker append=yes
+      
+    
+

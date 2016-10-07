@@ -1,0 +1,27 @@
+# docker-compose.yml
+db:
+  image: mysql:5.6
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=nice_secret
+    - MYSQL_DATABASE=employees
+  volumes:
+    - ./init_data:/docker-entrypoint-initdb.d
+
+web:
+  build: . 
+  ports:
+    - "80:80"
+  volumes:
+    - ./pptyx_nice_app:/var/www/nice_app
+  links:
+    - db:db_container  
+    
+
+    
+    
+
+
+
+
