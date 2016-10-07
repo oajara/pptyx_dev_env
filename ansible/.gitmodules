@@ -1,6 +1,0 @@
-[submodule "test_db"]
-	path = test_db
-	url = git@github.com:datacharmer/test_db.git
-[submodule "pptyx_nice_app"]
-	path = pptyx_nice_app
-	url = git@github.com:oajara/pptyx_nice_app.git
