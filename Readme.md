@@ -45,7 +45,18 @@ The environment's mysql database is available at your workstation's local 13306 
 
 _Note: do not use 'localhost' as the database hostname because, depending on your operating system, it might try to connect using file sockets and it will fail to connect. Use '127.0.0.1'._
 
-####Use the environment!
-To hit the container's web server you must browse your workstation's local 10080 port: http://localhost:10080
-
+####Use the environment! 
 The _pptyx_nice_app/_ directory inside the cloned repo in your workstation is mirrored in the document root of the web server container. This means the code changes in your local directory will be available for test in real time.
+The app config file is no exception to this so notice the container is using your local copy of _pptyx_nice_app/config/db.ini_, which you should set to the following values:
+
+`database = employees`
+
+`hostname = db_container`
+
+`username = root`
+
+`password = nice_secret` 
+
+To hit the container's web server you must browse your workstation's local 10080 port: [http://localhost:10080](http://localhost:10080) 
+
+

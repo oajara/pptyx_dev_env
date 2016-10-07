@@ -22,9 +22,6 @@ ADD conf/www.conf /etc/php5/fpm/pool.d/www.conf
 # vhost configuration for our NiceApp    
 ADD conf/vhost.conf /etc/nginx/sites-available/default
 
-# Config file for NiceApp
-ADD conf/db.ini /var/www/nice_app/config/db.ini
-
 # Supervisord configuration file
 ADD conf/supervisord.conf /etc/supervisord.conf
 
